@@ -1,8 +1,9 @@
-.box1 {
+.box {
 	margin-bottom: 2px;
 	height: 2em;
 	width: 2em;
 	background-color: blue;
 	font-size: 5em;
 	border: 2em;
+	text-align: center;
 };

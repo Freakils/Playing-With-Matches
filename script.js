@@ -8,31 +8,30 @@ function getRandomNumber(min, max) {
 	for (var count = 0; count < box.length; count++){
 		box[count].innerHTML = getRandomNumber(1,4);
 	}
-		// box[count+1].innerHTML = getRandomNumber(1,4);
-		// box[2].innerHTML = randomThree;
 
 			if(box[1].innerHTML === box[2].innerHTML) {
 				box[1].classList.add("high");
 				box[2].classList.add("high");
+				var msg = document.getElementById("para");
+				msg.innerHTML ="two numbers are matching : " + box[2].innerHTML + "'s";
 			}
+
 
 			if(box[0].innerHTML === box[1].innerHTML) {
 				box[0].classList.add("high");
 				box[1].classList.add("high");
+				var msg = document.getElementById("para");
+				msg.innerHTML ="two numbers are matching : " + box[1].innerHTML + "'s";
 			}
 
 			if(box[0].innerHTML === box[2].innerHTML) {
 				box[0].classList.add("high");
 				box[2].classList.add("high");
+				var msg = document.getElementById("para");
+				msg.innerHTML ="numbers are matching : " + box[0].innerHTML + "'s";
 			}
 
-// function getRandomNumber(min, max) {
-//   return Math.floor(Math.random() * (max - min)) + 1;
-// };
-// //console.log('blah', getRandomNumber(1, 9));
-	
-
-// var box = document.querySelectorAll(".box");
-
-// updateBlock();
-// highlightMatching();
+			// if(box[0].innerHTML === box[1].innerHTML && box[1].innerHTML === box[2].innerHTML && box[0].innerHTML === box[2].innerHTML) {
+			// 	var msg = document.getElementById("para");
+			// 	msg.innerHTML ="three numbers are matching : " + box[count].innerHTML + "'s";
+			// }

@@ -9,14 +9,6 @@ function getRandomNumber(min, max) {
 		box[count].innerHTML = getRandomNumber(1,4);
 	}
 
-			if(box[1].innerHTML === box[2].innerHTML) {
-				box[1].classList.add("high");
-				box[2].classList.add("high");
-				var msg = document.getElementById("para");
-				msg.innerHTML ="two numbers are matching : " + box[2].innerHTML + "'s";
-			}
-
-
 			if(box[0].innerHTML === box[1].innerHTML) {
 				box[0].classList.add("high");
 				box[1].classList.add("high");
@@ -24,14 +16,22 @@ function getRandomNumber(min, max) {
 				msg.innerHTML ="two numbers are matching : " + box[1].innerHTML + "'s";
 			}
 
+
+			if(box[1].innerHTML === box[2].innerHTML) {
+				box[1].classList.add("high");
+				box[2].classList.add("high");
+				var msg = document.getElementById("para");
+				msg.innerHTML ="two numbers are matching : " + box[2].innerHTML + "'s";
+			}
+
 			if(box[0].innerHTML === box[2].innerHTML) {
 				box[0].classList.add("high");
 				box[2].classList.add("high");
 				var msg = document.getElementById("para");
-				msg.innerHTML ="numbers are matching : " + box[0].innerHTML + "'s";
+				msg.innerHTML =" numbers are matching : " + box[0].innerHTML + "'s";
 			}
 
-			// if(box[0].innerHTML === box[1].innerHTML && box[1].innerHTML === box[2].innerHTML && box[0].innerHTML === box[2].innerHTML) {
-			// 	var msg = document.getElementById("para");
-			// 	msg.innerHTML ="three numbers are matching : " + box[count].innerHTML + "'s";
-			// }
+			if(box[0].innerHTML === box[1].innerHTML && box[1].innerHTML === box[2].innerHTML && box[0].innerHTML === box[2].innerHTML) {
+				var msg = document.getElementById("para");
+				msg.innerHTML ="three numbers are matching : " + box[2].innerHTML + "'s";
+			}

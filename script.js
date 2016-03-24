@@ -1,6 +1,6 @@
 
 function getRandomNumber(min, max) {
-  return Math.floor(Math.random() * (9 - 1)) + 1;
+  return Math.floor(Math.random() * (max - min)) + min;
 };
 
 	var box = document.querySelectorAll(".box");

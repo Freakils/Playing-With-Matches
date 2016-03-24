@@ -1,14 +1,17 @@
 
 function getRandomNumber(min, max) {
-  return Math.floor(Math.random() * (4 - 1)) + 1;
+  return Math.floor(Math.random() * (9 - 1)) + 1;
 };
 
 	var box = document.querySelectorAll(".box");
 	// document.getElementById("box1").innerHTML = range;
 
 function reloadPage() {
+	window.location.reload();
+}
+var update = function() {
 	for (var count = 0; count < box.length; count++){
-		box[count].innerHTML = getRandomNumber(1,4);
+		box[count].innerHTML = getRandomNumber(1,9);
 		box[count].classList.remove("high");
 		var msg = document.getElementById("para");
 			msg.innerHTML = "...";
@@ -230,10 +233,10 @@ if(box[0].innerHTML === box[4].innerHTML && box[4].innerHTML === box[8].innerHTM
 		}			
 
 };
-reloadPage();
+update();
 
-var relBut = document.getElementById("but");
-	relBut.addEventListener("click",function(){
-		reloadPage();
-	});
+// var relBut = document.getElementById("but");
+// 	relBut.addEventListener("click",function(){
+// 		update();
+// 	});
 // console.log(relBut);
